@@ -6,10 +6,10 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Initialize the OpenAI client with your API key
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI()
 
 # Upload a file with an "assistants" purpose
 file = client.files.create(
