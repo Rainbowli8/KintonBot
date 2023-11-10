@@ -5,7 +5,7 @@ import time
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+load_dotenv(override=True)
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Initialize the OpenAI client with your API key
