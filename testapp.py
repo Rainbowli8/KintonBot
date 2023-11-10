@@ -2,9 +2,14 @@ import streamlit as st
 import openai
 from openai import OpenAI
 import time
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.getenv('OPENAI_API_KEY')
 
 # Initialize the OpenAI client with your API key
-client = OpenAI(api_key="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")
+client = OpenAI()
 
 # Upload a file with an "assistants" purpose
 file = client.files.create(
