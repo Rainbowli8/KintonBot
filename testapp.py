@@ -72,8 +72,8 @@ def send_message_get_response(user_input):
 
 # Function to update conversation
 def update_conversation(user_question, bot_answer):
-    st.session_state.conversation.append("User: " + user_question)
-    st.session_state.conversation.append("Bot: " + bot_answer)
+    st.session_state.conversation.append("Question: " + user_question)
+    st.session_state.conversation.append("Answer: " + bot_answer)
 
 # Button to send the message
 if st.button("Send"):
